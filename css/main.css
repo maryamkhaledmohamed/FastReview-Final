@@ -1,0 +1,387 @@
+:root {
+  --primary: #e1b77e;
+  --grey: #64748b;
+  --dark: #00263e;
+  --dark-alt: #334155;
+  --light: #f1f5f9;
+  --sidebar-width: 225px;
+  --main-transition: all 0.2s ease-in-out;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.15);
+}
+
+body {
+  background-color: var(--light);
+  font-family: "Basic", sans-serif;
+}
+button {
+  cursor: pointer;
+  appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+}
+.app {
+  display: flex;
+  main {
+    flex: 1 1 0;
+    padding: 2rem;
+    @media (max-width: 768px) {
+      padding-left: 6rem;
+    }
+  }
+}
+
+.my-special-btn {
+  transition: var(--main-transition);
+  background-color: #f1f5f9;
+}
+.my-special-btn:hover {
+  background-color: var(--dark) !important;
+  color: var(--light) !important;
+}
+
+.best-fits:hover{
+  color: var(--light)!important;
+}
+
+.plan-btn {
+  width: 275px;
+  margin-top: 35px;
+  height: 75px;
+  background-color: var(--dark);
+  color: var(--light);
+  font-size: 40px;
+  font-weight: 500;
+  text-align: center;
+  border-radius: 40px;
+  transition: var(--main-transition);
+}
+.plan-btn:hover {
+  background-color: var(--dark);
+  opacity: 0.8;
+}
+
+.custom-btn {
+  width: 275px;
+  height: 75px;
+  background-color: var(--light);
+  color: var(--dark);
+  font-size: 40px;
+  font-weight: 500;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px #777;
+  transition: var(--main-transition);
+  text-transform: uppercase;
+}
+.custom-btn:hover {
+  background-color: var(--dark);
+  color: var(--light);
+}
+/* End Root */
+
+/* Start Navbar */
+.nav-link {
+  color: var(--dark);
+  transition: var(--main-transition);
+}
+.nav-link:hover {
+  color: var(--primary);
+}
+/* End Navbar */
+
+/* Satrt Fast */
+.fast h3 {
+  font-size: 80px;
+}
+/* End Fast */
+
+/* Satrt Video */
+.video-img {
+  background-image: url(../imgs/shutterstock-2014944740-1.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+.video-img h3 {
+  margin: 25% auto;
+  font-size: 65px;
+  color: var(--light);
+}
+/* End Video */
+
+/* Start Cards */
+.card {
+  margin: 10px auto;
+}
+@media (max-width: 991px) {
+  .card {
+    text-align: center;
+    margin: 10px auto;
+  }
+}
+.card-body {
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: 0px 5px 5px 5px #ccc;
+}
+.card-body img {
+  width: 85px;
+}
+.card-body span {
+  font-size: 50px;
+  color: var(--dark);
+  font-weight: bold;
+}
+.card-body p {
+  font-weight: 500;
+}
+/* End Cards */
+
+/* Start Take */
+.take {
+  background-color: var(--dark);
+  color: var(--primary);
+  text-align: center;
+  padding: 30px 0 30px 0;
+}
+.take h3 {
+  font-size: 55px;
+}
+@media (max-width: 991px) {
+  .take h3 {
+    font-size: 36px;
+  }
+}
+/* End Take */
+/* Start Take */
+.platform {
+  background-color: var(--light);
+  text-align: left;
+  padding: 60px 0 30px 0;
+}
+@media (max-width: 991px) {
+  .platform {
+    text-align: center;
+  }
+}
+.platform h3 {
+  font-size: 60px;
+}
+.platform p {
+  margin-top: 10px;
+  font-size: 24px;
+  color: var(--primary);
+}
+/* End Take */
+
+/* Start With */
+.with {
+  background-color: var(--dark);
+}
+.with-content {
+  padding: 30px 0 10px 0;
+}
+.with-content h5 {
+  color: var(--light);
+  font-size: 22px;
+  margin: 20px 0 60px 0;
+}
+.with-img {
+  margin-top: -150px;
+}
+@media (max-width: 991px) {
+  .with-img {
+    display: none;
+  }
+}
+/* End With */
+
+/* Start Brands */
+
+.brand img {
+  width: 80%;
+}
+@media (max-width: 991px) {
+  .brand {
+    text-align: center;
+  }
+  .brand img {
+    width: 200px;
+  }
+}
+/* End Brands */
+
+/* ********** Start Reviews Page **********/
+/* Start Reviews */
+.reviews {
+  background-color: var(--dark);
+  color: var(--light);
+}
+.reviews .review-content {
+  margin-top: 150px;
+}
+.reviews .review-content h3 {
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+.reviews .review-content p {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+.reviews .review-img img {
+  width: 60%;
+}
+/* End Reviews */
+
+/* ********** End Reviews Page **********/
+
+/* ********** Start Franchise Page **********/
+
+/* Start Adv Card*/
+.adv-card {
+  padding: 25px;
+  border-radius: 10px;
+  background-color: var(--dark);
+  color: var(--light);
+  width: 300px;
+}
+.adv-card h3 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+.adv-card img {
+  width: 120px;
+  margin-top: 20px;
+}
+/* End Adv Card*/
+
+/* Start Vision */
+.vision {
+  background-color: #fff;
+  padding: 30px 0 30px 0;
+  border-radius: 10px;
+  box-shadow: 7px 7px 2px #ccc;
+  height: 75%;
+}
+.vision img {
+  width: 150px;
+  margin-bottom: 30px;
+}
+.vision h5 {
+  font-size: 26px;
+  text-align: center;
+}
+/* End Vision */
+
+.brochure-inputs {
+  padding: 20px;
+}
+.brochure-inputs label {
+  color: var(--dark);
+  font-size: 26px;
+  font-weight: 600;
+  margin-left: 20px;
+}
+.brochure-inputs input {
+  width: 280px;
+  height: 35px;
+  margin: 10px;
+  background-color: var(--light);
+  border-radius: 10px;
+  border: 1px solid transparent;
+  box-shadow: 5px 5px 5px #666;
+}
+/* ********** End Franchise Page **********/
+
+/* ********** Start Media **********/
+.home-img img {
+  width: 600px;
+}
+@media (max-width: 768px) {
+  .home-img img {
+    width: 100%;
+  }
+}
+.footer {
+  background-color: var(--dark);
+  color: #eee;
+}
+@media (max-width: 768px) {
+  .footer {
+    text-align: center;
+  }
+}
+.footer-bottom {
+  bottom: 0;
+  left: 0%;
+}
+@media (max-width: 768px) {
+  .footer-bottom {
+    margin-left: 0;
+    top: 0;
+  }
+}
+@media (max-width: 768px) {
+  .footer-bottom,
+  .footer-top {
+    margin-top: 50px;
+    justify-content: center;
+  }
+}
+
+.load-more:hover {
+  border: 1px solid var(--light);
+}
+
+/* ********** End Media **********/
+
+
+.fast-reviews{
+  background: #0f263d;
+  color: #fff;
+}
+.fast-reviews h3 {
+  padding:20px ;
+}
+.fast-reviews p {
+  padding-left: 30px;
+}
+.fast-reviews .Qu{
+  background-color: #fff;
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  transform: translate(0px, -10px);
+  border-radius: 10px;
+}
+.fast-reviews .Qu button{
+  
+  font-size: 20px;
+  padding: 10px;
+}
+.fast-reviews .Qu span{
+  color: #000;
+  font-size: 20px;
+  padding: 10px;
+}
+.fast-reviews h2 {
+  font-size: 100px;
+  padding: 20px;
+}
+.fast-reviews h2 span{
+  font-size: 20px;
+}
