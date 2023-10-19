@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- <link rel="icon" href="imgs/logo.png" type="image/logo-icon" /> -->
+  <link rel="icon" href="imgs/raito-logo.jpg" type="image/logo-icon" />
+  <title>FastReview | Order</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Basic&display=swap" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="css/all.min.css" />
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/normalize.css" />
+  <link rel="stylesheet" href="css/main.css" />
+  <!-- Font Awesome -->
+</head>
+
+<style>
+  /* Slider */
+  @keyframes logoSlider {
+    from {
+      transform: translate(-100%);
+    }
+
+    to {
+      transform: translate(0);
+    }
+  }
+
+  .logo-slider {
+    display: inline-block;
+    animation: logoSlider 25s infinite linear;
+  }
+
+  .logo-slider img {
+    margin: 0 40px;
+  }
+
+  .slider {
+    white-space: nowrap;
+    overflow: hidden;
+    padding: 80px 0;
+    position: relative;
+  }
+
+  .slider::before,
+  .slider::after {
+    position: absolute;
+    top: 0;
+    width: 150px;
+    height: 100%;
+    content: "";
+    z-index: 2;
+  }
+
+  .product-colors span {
+    width: 26px;
+    height: 26px;
+    top: 7px;
+    margin-right: 12px;
+    left: 10px;
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+  }
+
+  .black {
+    background: #000;
+  }
+
+  .red {
+    background: #d5212e;
+  }
+
+  .orange {
+    background: #f18557;
+  }
+
+  .product-colors .active:after {
+    content: "";
+    width: 36px;
+    height: 36px;
+    border: 2px solid #000;
+    position: absolute;
+    border-radius: 50%;
+    box-sizing: border-box;
+    left: -5px;
+    top: -5px;
+  }
+</style>
+
+<body>
+  <!-- Start NavBar -->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top navbar-light bg-light">
+    <div class="container">
+      <img src="./imgs/fast-review-logo-1.png" style="width: 200px;" alt="">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon" style="border: 1px solid #000;"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-5">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="order-2.html">Order</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="franchise.html">Franchise</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- End NavBar -->
+
+  <!-- Start Video -->
+  <div class="video position-relative">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="video-img position-relative">
+          <h3 class="text-center mb-4" style="font-size: 80px">
+            Get Your Card Now<br />
+            <p style="font-size: 26px">
+              Unlock Your Fast Review Card <br />with Just One More Step
+            </p>
+            <i class="fa-solid fa-arrow-down mt-2" style="width: 50px"></i>
+          </h3>
+        </div>
+          <div class="layout" style="position: absolute;
+                                              background: #00263e27;
+                                              opacity: .5;                              
+                                              top: 0;
+                                              left: 0;
+                                              width: 100%;
+                                              height: 100%;">
+          </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Video -->
+
+  <!-- Start Awards -->
+  <div class="container-fluid p-5 mb-5" style="background-color: rgba(236, 240, 241, 1)">
+    <div class="row text-center">
+      <h3 style="font-size: 60px; margin-bottom: 30px">
+        Great choice! Now let’s get in touch!
+      </h3>
+    </div>
+  </div>
+  <!-- End Awards -->
+
+  <!-- Start Image -->
+  <!-- <div class="container-fluid mt-5 mb-5">
+      <img src="./imgs/test-img.jpg" alt="" style="width: 100%" />
+    </div> -->
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-5">
+        <div>
+          <img decoding="async" style="border-radius: 20px; margin: 20px auto" class="img d-block"
+            src="https://via.placeholder.com/500x250/000/?text=YOUR+DESIGN+HERE" alt="" />
+        </div>
+        <div class="d-flex" style="justify-content: space-evenly">
+          <div><i class="fa-solid fa-arrow-left"></i></div>
+          <div>
+            <p class="product-colors d-flex" style="justify-content: center">
+              <span class="black active" data-color-primary="000" data-color-sec="#212121"
+                data-pic="https://github.com/anuzbvbmaniac/Responsive-Product-Card---CSS-ONLY/blob/master/assets/img/jordan_proto.png?raw=true"></span>
+              <span class="red" data-color-primary="7E021C" data-color-sec="#bd072d"
+                data-pic="https://github.com/anuzbvbmaniac/Responsive-Product-Card---CSS-ONLY/blob/master/assets/img/jordan_proto_red_black.png?raw=true"></span>
+              <span class="orange" data-color-primary="CE5B39" data-color-sec="#F18557"
+                data-pic="https://github.com/anuzbvbmaniac/Responsive-Product-Card---CSS-ONLY/blob/master/assets/img/jordan_proto_orange_black.png?raw=true"></span>
+            </p>
+          </div>
+          <div><i class="fa-solid fa-arrow-right"></i></div>
+        </div>
+      </div>
+      <div class="col-lg-7 me-auto">
+        <div class="fast-reviews">
+          <h3>Fast Review - Stater Card</h3>
+          <p>Quantity</p>
+          <div class="row">
+            <div class="Qu col-lg-6 m-auto">
+              <button id="decrease">-</button>
+              <span id="quantity"> 0 </span>
+              <button id="increase">+</button>
+            </div>
+            <div class="col-lg-6 m-auto">
+              <p>Dimensions: 54mm × 86mm × 1.7mm</p>
+              <p>Weight: 5.2grams</p>
+              <p>Material: Plastic</p>
+            </div>
+          </div>
+          <h2>20$ <span> / pre month</span></h2>
+          <button class="position-absolute custom-btn" style="margin: -40px 0px 0px 400px;">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Image -->
+
+  <!-- Start Modal -->
+  <div class="container p-5">
+    <div class="row">
+      <p class="d-inline-flex gap-1">
+        <a class="btn btn-light" style="border: 1px solid #333" data-bs-toggle="collapse" href="#collapseExample1"
+          role="button" aria-expanded="false" aria-controls="collapseExample">
+          Link with href
+        </a>
+        <button class="btn btn-light" style="border: 1px solid #333" type="button" data-bs-toggle="collapse"
+          data-bs-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample">
+          FAQS
+        </button>
+        <button class="btn btn-light" style="border: 1px solid #333" type="button" data-bs-toggle="collapse"
+          data-bs-target="#collapseExample3" aria-expanded="false" aria-controls="collapseExample">
+          DESIGN GUIDELINES
+        </button>
+        <button class="btn btn-light" style="border: 1px solid #333" type="button" data-bs-toggle="collapse"
+          data-bs-target="#collapseExample4" aria-expanded="false" aria-controls="collapseExample">
+          DELIVERY ESTIMATOR
+        </button>
+      </p>
+      <div class="collapse" id="collapseExample1">
+        <div class="card card-body text-start">
+          <p style="font-size: 24px">
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry s standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of
+            type and scrambled it to make a type specimen book.
+          </p>
+          <p style="font-size: 24px">
+            It has survived not only five centuries, but also the leap into
+            electronic typesetting, remaining essentially unchanged. It was
+            popularised in the 1960s with the release of Letraset sheets
+            containing Lorem Ipsum passages, and more recently with desktop
+            publishing software like Aldus PageMaker including versions of
+            Lorem Ipsum
+          </p>
+        </div>
+      </div>
+      <div class="collapse" id="collapseExample2">
+        <div class="card card-body">2</div>
+      </div>
+      <div class="collapse" id="collapseExample3">
+        <div class="card card-body">3</div>
+      </div>
+      <div class="collapse" id="collapseExample4">
+        <div class="card card-body">4</div>
+      </div>
+      <div class="feat-order d-flex justify-content-start gap-5">
+        <div>
+          <i class="fa-solid fa-truck"></i>
+          Worldwide shipping
+        </div>
+        <div>
+          <i class="fa-solid fa-circle-check"></i>
+          Free In-House Design
+        </div>
+        <div>
+          <i class="fa-solid fa-headphones-simple"></i>
+          24/7 customer support
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Modal -->
+
+  <!-- Start Pictures -->
+  <div class="container" style="margin-top: 80px">
+    <div class="row" style="padding-bottom: 50px;">
+      <div class="col-md-6 col-sm-12">
+        <img src="./imgs/image-8.png" alt="" style="mix-blend-mode: multiply; width: 90%" />
+      </div>
+      <div class="col-md-6 col-sm-12">
+        <img src="./imgs/image-8.png" alt="" style="mix-blend-mode: multiply; width: 90%" />
+      </div>
+    </div>
+  </div>
+  <!-- End Pictures -->
+
+  <!-- Start Form  -->
+  <div class="container mb-5" style="background-color: var(--dark); padding: 55px">
+    <div class="row">
+      <div class="col-md-6 col-sm-12">
+        <div class="form" style="color: var(--light); font-size: 30px">
+          <label for="name">Name</label><br />
+          <input style="border-radius: 20px" type="text" /><br />
+          <label for="company">Company Name</label><br />
+          <input style="border-radius: 20px" type="text" /><br />
+          <label for="country">Country</label><br />
+          <input style="border-radius: 20px" type="text" /><br />
+          <label for="phone">Phone Number</label><br />
+          <input style="border-radius: 20px" type="number" />
+        </div>
+      </div>
+      <div class="col-md-6 col-sm-12">
+        <div class="form" style="color: var(--light); font-size: 30px">
+          <label for="surname">Surname</label><br />
+          <input style="border-radius: 20px" type="text" /><br />
+          <label for="type">Type of business</label><br />
+          <input style="border-radius: 20px" type="text" /><br />
+          <label for="email">Email</label><br />
+          <input style="border-radius: 20px" type="email" /><br />
+          <label for="phone">Phone Number</label><br />
+          <input style="border-radius: 20px" type="number" />
+        </div>
+      </div>
+      <div class="col-12 mt-5" style="color: var(--light)">
+        <div class="form-textarea">
+          <label for="" style="font-size: 30px">Additional comment</label>
+          <textarea style="width: 100%; border-radius: 20px; resize: none" name="" id="" cols="30" rows="10"></textarea>
+        </div>
+      </div>
+      <div class="form-btn position-relative">
+        <button class="position-absolute mt-3 custom-btn">Submit</button>
+      </div>
+    </div>
+  </div>
+  <!-- End Form  -->
+
+  <!-- Start Image -->
+  <!-- <img src="./imgs/image-5.png" alt="" style="width: 100%" /> -->
+  <!-- End Image -->
+
+<!-- Start Footer -->
+<div class="footer">
+  <div class="container  pb-3">
+    <div class="row">
+      <div class="col-md-8 col-sm-12">
+        <div class="d-flex gap-5 mt-5 footer-top">
+          <div style="font-size: 20px;">
+            <p><a href="index.html" style="color: var(--light);text-decoration: none;">Home</a></p>
+            <p><a href="franchise.html" style="color: var(--light);text-decoration: none;">Franchise</a>
+            </p>
+            <p><a href="about.html" style="color: var(--light);text-decoration: none;">About</a></p>
+            <br>
+            <br>
+            <p><a href="blog.html" style="color: var(--light);text-decoration: none;">News/Blog</a>
+            </p>
+            <p><a href="reviews.html" style="color: var(--light);text-decoration: none;">Reviews</a></p>
+          </div>
+          <div style="font-size: 20px;margin-top: 90px;">
+            <p><a href="order-1.html" style="color: var(--light);text-decoration: none;">Order</a></p>
+            <p><a href="referral.html" style="color: var(--light);text-decoration: none;">Refferal
+                program</a></p>
+            <p><a href="franchise.html" style="color: var(--light);text-decoration: none;">Become a
+                franchise</a></p>
+            <p><a href="contact.html" style="color: var(--light);text-decoration: none;">Become a
+                client</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-12 position-relative text-center footer-bottom" style="margin-top: 100px;">
+        <h3>Contact</h3>
+        <p>+385911985132</p>
+        <p>Boškovićeva ul. 7,</p>
+        <p>Zagreb , Croatia</p>
+        <div class="d-flex gap-5 footer-bottom justify-content-center mt-4">
+          <i class="fa-brands fa-instagram fa-2x"  style="cursor: pointer;"></i>
+          <i class="fa-brands fa-facebook fa-2x"  style="cursor: pointer;"></i>
+          <i class="fa-brands fa-youtube fa-2x"  style="cursor: pointer;"></i>
+        </div>
+      </div>
+      <div class="col-12 text-center mt-5">
+        <p style="color: var(--light);">© copyright 2023 FastReview © | All Rights Reserved | <a href="privacy.html"
+            style="color: var(--light);">Privacy
+            Policy</a> | <a href="#" style="color: var(--light);">Terms & Conditions</a></ps>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Footer -->
+
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script>
+    // Change The Picture and Associated Element Color when Color Options Are Clicked.
+    $(".product-colors span").click(function () {
+      $(".product-colors span").removeClass("active");
+      $(this).addClass("active");
+      $(".active").css("border-color", $(this).attr("data-color-sec"));
+
+      let bgColor = $(this).attr("data-color-primary");
+      let img = document.querySelector(".img");
+      img.src = `https://via.placeholder.com/500x250/${bgColor}?text=YOUR+DESIGN+HERE`;
+    });
+    // تحديد عناصر HTML
+    const quantityElement = document.getElementById("quantity");
+    const decreaseButton = document.getElementById("decrease");
+    const increaseButton = document.getElementById("increase");
+
+    decreaseButton.addEventListener("click", () => {
+      let currentQuantity = parseInt(quantityElement.textContent);
+      if (currentQuantity > 1) {
+        quantityElement.textContent = (currentQuantity - 1).toString();
+      }
+    });
+
+    increaseButton.addEventListener("click", () => {
+      let currentQuantity = parseInt(quantityElement.textContent);
+      quantityElement.textContent = (currentQuantity + 1).toString();
+    });
+  </script>
+  <script src="js/index.js"></script>
+</body>
+
+</html>

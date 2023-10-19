@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="icon" href="imgs/logo.png" type="image/logo-icon" /> -->
+    <link rel="icon" href="imgs/raito-logo.jpg" type="image/logo-icon" />
+    <title>FastReview | Order-1</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Basic&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <!-- Font Awesome -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!------ Include the above in your HEAD tag ---------->
+</head>
+
+<style>
+    /* .wrapper {
+        background: #497dd0;
+        padding: 100px;
+    } */
+
+    .toggle_radio {
+        position: relative;
+        background: #EEE;
+        margin: 0px auto;
+        overflow: hidden;
+        padding: 0px !important;
+        -webkit-border-radius: 50px;
+        -moz-border-radius: 50px;
+        border-radius: 50px;
+        position: relative;
+        height: 70px;
+        width: 350px;
+    }
+
+    .toggle_radio>* {
+        float: left;
+    }
+
+    .toggle_radio input[type=radio] {
+        display: none;
+    }
+
+    .toggle_radio label {
+        color: var(--dark);
+        z-index: 0;
+        font-size: 20px;
+        font-weight: bold;
+        display: block;
+        width: 100px;
+        height: 50px;
+        line-height: 50px;
+        margin: 7px 75px 0 0px;
+        -webkit-border-radius: 50px;
+        -moz-border-radius: 50px;
+        border-radius: 50px;
+        cursor: pointer;
+        z-index: 1;
+        text-align: center;
+    }
+
+    .toggle_option_slider {
+        width: 100px;
+        height: 20px;
+        position: absolute;
+        top: 6px;
+        -webkit-border-radius: 50px;
+        -moz-border-radius: 50px;
+        border-radius: 50px;
+        -webkit-transition: all .4s ease;
+        -moz-transition: all .4s ease;
+        -o-transition: all .4s ease;
+        -ms-transition: all .4s ease;
+        transition: all .4s ease;
+    }
+
+    #first_toggle:checked~.toggle_option_slider {
+        background: rgba(127, 140, 141, .2);
+        left: 3px;
+        width: 170px;
+        height: 60px;
+    }
+
+    #second_toggle:checked~.toggle_option_slider {
+        background: rgba(127, 140, 141, .2);
+        left: 175px;
+        width: 170px;
+        height: 60px;
+    }
+
+    /* Start Table */
+    .wrapper {
+        margin: 0 auto;
+        padding: 40px;
+        max-width: 1200px;
+    }
+
+    .table {
+        margin: 0 0 40px 0;
+        width: 100%;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+        display: table;
+    }
+
+    @media screen and (max-width: 580px) {
+        .table {
+            display: block;
+        }
+    }
+
+    .roww {
+        display: table-row;
+        background: #f6f6f6;
+    }
+
+    .roww:nth-of-type(odd) {
+        background: #e9e9e9;
+    }
+
+    .roww.header {
+        font-weight: 900;
+        color: var(--dark);
+        background: #CCC;
+    }
+
+    @media screen and (max-width: 580px) {
+        .roww {
+            padding: 14px 0 7px;
+            display: block;
+        }
+
+        .roww.header {
+            padding: 0;
+            height: 6px;
+        }
+
+        .roww.header .cell {
+            display: none;
+        }
+
+        .roww .cell {
+            margin-bottom: 10px;
+        }
+
+        .roww .cell:before {
+            margin-bottom: 3px;
+            content: attr(data-title);
+            min-width: 98px;
+            font-size: 10px;
+            line-height: 10px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #969696;
+            display: block;
+        }
+    }
+
+    .cell {
+        padding: 6px 12px;
+        display: table-cell;
+    }
+
+    @media screen and (max-width: 580px) {
+        .cell {
+            padding: 2px 16px;
+            display: block;
+        }
+    }
+
+    /* End Table */
+    .plan-btn:hover{
+        background-color: #00263e77;
+
+    }
+</style>
+
+<body>
+    <!-- Start NavBar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top navbar-light bg-light">
+        <div class="container">
+            <img src="./imgs/fast-review-logo-1.png" style="width: 200px;" alt="">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon" style="border: 1px solid #000;"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-5">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="order-2.html">Order</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="franchise.html">Franchise</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- End NavBar -->
+
+    <!-- Start Video -->
+    <div class="video position-relative">
+        <div class="container-fluid ">
+            <div class="row">
+                <div class="video-img position-relative">
+                    <h3 class="text-center mb-4" style="font-size: 70px; position: relative; z-index: 3;">Get Your Card Now
+                        <br>
+                        <P style="font-size: 32px;">Unlock Your Fast Review Card <br>with Just One More Step</P>
+                        <i class="fa-solid fa-arrow-down mt-5" style="width: 50px;"></i>
+                    </h3>
+                </div>
+                <div class="layout" style="position: absolute;
+                background: rgba(0,0,0,0.5);
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;"></div>
+            </div>
+        </div>
+    </div>
+    <!-- End Video -->
+
+
+    <!-- Start Fast -->
+    <div class="fast-review" style="padding-top:80px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <div class="fast-review-head">
+                        <h3 style="font-size: 56px;font-weight: 500;">Fast Review Pricing</h3>
+                        <p class="mt-3" style="font-size: 28px;">Choose an all-in-one package with flexible upgrades</p>
+                    </div>
+                    <div class="wrapper">
+                        <div class="toggle_radio">
+                            <input type="radio" class="toggle_option" id="first_toggle" name="toggle_option">
+                            <input type="radio" checked class="toggle_option" id="second_toggle" name="toggle_option">
+                            <input type="radio" class="toggle_option" id="third_toggle" name="toggle_option">
+                            <label for="first_toggle">
+                                <p>Montly</p>
+                            </label>
+                            <label for="second_toggle">
+                                <p>Annual</p>
+                            </label>
+                            <div class="toggle_option_slider">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Fast -->
+
+    <!-- Start Cards -->
+    <div class="cards">
+        <div class="container mt-5 pt-5 pb-5">
+            <div class="row">
+                <div class="col-md-4 col-sm-12">
+                    <div class="card" style="background-color: #e1b87e85;border-radius: 58px;padding: 20px;">
+                        <div class="card-body text-center" style="box-shadow: none;">
+                            <h3 style="font-size: 40px;color: var(--dark);">Entry</h3>
+                            <div class="number">
+                                <div class="value-wrap">
+                                    <div class="d-flex justify-content-center">
+                                        <span class="value" style="font-size: 100px;" akhi="">10</span>
+                                        <span>$</span>
+                                    </div>
+                                    <p>/per month</p>
+                                </div>
+                            </div>
+                            <button class="plan-btn">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-12">
+                    <div class="card" style="background-color: #E1B77E;border-radius: 58px;padding: 20px;">
+                        <div class="card-body text-center" style="box-shadow: none;">
+                            <h3 style="font-size: 40px;color: var(--dark);">Starter</h3>
+                            <div class="number">
+                                <div class="value-wrap">
+                                    <div class="d-flex justify-content-center">
+                                        <span class="value" style="font-size: 100px;" akhi="">20</span>
+                                        <span>$</span>
+                                    </div>
+                                    <p>/per month</p>
+                                </div>
+                            </div>
+                            <button class="plan-btn">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-12">
+                    <div class="card" style="background-color: #e1b87e85;border-radius: 58px;padding: 20px;">
+                        <div class="card-body text-center" style="box-shadow: none;">
+                            <h3 style="font-size: 40px;color: var(--dark);">Premium</h3>
+                            <div class="number">
+                                <div class="value-wrap">
+                                    <div class="d-flex justify-content-center">
+                                        <span class="value" style="font-size: 100px;" akhi="">30</span>
+                                        <span>$</span>
+                                    </div>
+                                    <p>/per month</p>
+                                </div>
+                            </div>
+                            <button class="plan-btn">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Cards -->
+
+
+    <!-- Start First Table -->
+    <div class="wrapper">
+        <div class="table">
+            <div class="roww header">
+                <div class="cell">
+                    PMS
+                </div>
+                <div class="cell">
+                    Entry
+                </div>
+                <div class="cell">
+                    Starter
+                </div>
+                <div class="cell">
+                    Premium
+                </div>
+                <div class="cell">
+                    Enterprise
+                </div>
+            </div>
+            <div class="roww">
+                <div class="cell" data-title="Name">
+                    <i class="fa-solid fa-circle-plus" style="color: red;"></i>Users
+                </div>
+                <div class="cell" data-title="Age">
+                    2
+                </div>
+                <div class="cell" data-title="Occupation">
+                    8
+                </div>
+                <div class="cell" data-title="Location">
+                    20
+                </div>
+                <div class="cell" data-title="Enterprise">
+                    Unlimited
+                </div>
+            </div>
+            <div class="roww">
+                <div class="cell" data-title="Name">
+                    <i class="fa-solid fa-circle-plus" style="color: red;"></i>
+                    Customisable User Permissions
+                </div>
+                <div class="cell" data-title="Age">
+                    -
+                </div>
+                <div class="cell" data-title="Occupation">
+                    <i class="fa-solid fa-check" style="color: green;"></i>
+                </div>
+                <div class="cell" data-title="Location">
+                    <i class="fa-solid fa-check" style="color: green;"></i>
+                </div>
+                <div class="cell" data-title="Enterprise">
+                    <i class="fa-solid fa-check" style="color: green;"></i>
+                </div>
+            </div>
+            <div class="roww">
+                <div class="cell" data-title="Name">
+                    <i class="fa-solid fa-circle-plus" style="color: red;"></i>
+                    Online Check-In
+                </div>
+                <div class="cell" data-title="Age">
+                    <i class="fa-solid fa-check" style="color: green;"></i>
+                </div>
+                <div class="cell" data-title="Occupation">
+                    <i class="fa-solid fa-check" style="color: green;"></i>
+                </div>
+                <div class="cell" data-title="Location">
+                    <i class="fa-solid fa-check" style="color: green;"></i>
+                </div>
+                <div class="cell" data-title="Enterprise">
+                    <i class="fa-solid fa-check" style="color: green;"></i>
+                </div>
+            </div>
+            <div class="roww">
+                <div class="cell" data-title="Name">
+                    <i class="fa-solid fa-circle-plus" style="color: red;"></i>
+                    Online Check-Out
+                </div>
+                <div class="cell" data-title="Age">
+                    <i class="fa-solid fa-check" style="color: green;"></i>
+                </div>
+                <div class="cell" data-title="Occupation">
+                    <i class="fa-solid fa-check" style="color: green;"></i>
+                </div>
+                <div class="cell" data-title="Location">
+                    <i class="fa-solid fa-check" style="color: green;"></i>
+                </div>
+                <div class="cell" data-title="Enterprise">
+                    <i class="fa-solid fa-check" style="color: green;"></i>
+                </div>
+            </div>
+            <div class="roww">
+                <div class="cell" data-title="Name">
+                    <i class="fa-solid fa-circle-plus" style="color: red;"></i>
+                    Yield Management
+                </div>
+                <div class="cell" data-title="Age">
+                    Fixed Ruleset
+                </div>
+                <div class="cell" data-title="Occupation">
+                    Fixed Ruleset
+                </div>
+                <div class="cell" data-title="Location">
+                    Fixed Ruleset/20 Custom Rules
+                </div>
+                <div class="cell" data-title="Enterprise">
+                    Fixed Ruleset/75 Custom Rules
+                </div>
+            </div>
+            <div class="roww">
+                <div class="cell" data-title="Name">
+                    <i class="fa-solid fa-circle-plus" style="color: red;"></i>
+                    Automated Invoicing
+                </div>
+                <div class="cell" data-title="Age">
+                    <i class="fa-solid fa-check" style="color: green;"></i>
+                </div>
+                <div class="cell" data-title="Occupation">
+                    <i class="fa-solid fa-check" style="color: green;"></i>
+                </div>
+                <div class="cell" data-title="Location">
+                    <i class="fa-solid fa-check" style="color: green;"></i>
+                </div>
+                <div class="cell" data-title="Enterprise">
+                    <i class="fa-solid fa-check" style="color: green;"></i>
+                </div>
+            </div>
+            <div class="roww">
+                <div class="cell" data-title="Name">
+                    <i class="fa-solid fa-circle-plus" style="color: red;"></i>
+                    Guset Communication
+                </div>
+                <div class="cell" data-title="Age">
+                    <i class="fa-solid fa-check" style="color: green;"></i>
+                </div>
+                <div class="cell" data-title="Occupation">
+                    <i class="fa-solid fa-check" style="color: green;"></i>
+                </div>
+                <div class="cell" data-title="Location">
+                    <i class="fa-solid fa-check" style="color: green;"></i>
+                </div>
+                <div class="cell" data-title="Enterprise">
+                    <i class="fa-solid fa-check" style="color: green;"></i>
+                </div>
+            </div>
+            <div class="roww">
+                <div class="cell" data-title="Name">
+                    <i class="fa-solid fa-circle-plus" style="color: red;"></i>
+                    Group Bookings
+                </div>
+                <div class="cell" data-title="Age">
+                    <i class="fa-solid fa-check" style="color: green;"></i>
+                </div>
+                <div class="cell" data-title="Occupation">
+                    <i class="fa-solid fa-check" style="color: green;"></i>
+                </div>
+                <div class="cell" data-title="Location">
+                    <i class="fa-solid fa-check" style="color: green;"></i>
+                </div>
+                <div class="cell" data-title="Enterprise">
+                    <i class="fa-solid fa-check" style="color: green;"></i>
+                </div>
+            </div>
+            <div class="roww">
+                <div class="cell" data-title="Name">
+                    <i class="fa-solid fa-circle-plus" style="color: red;"></i>
+                    Room Allotment
+                </div>
+                <div class="cell" data-title="Age">
+                    -
+                </div>
+                <div class="cell" data-title="Occupation">
+                    -
+                </div>
+                <div class="cell" data-title="Location">
+                    <i class="fa-solid fa-check" style="color: green;"></i>
+                </div>
+                <div class="cell" data-title="Enterprise">
+                    <i class="fa-solid fa-check" style="color: green;"></i>
+                </div>
+            </div>
+            <div class="roww">
+                <div class="cell" data-title="Name">
+                    <i class="fa-solid fa-circle-plus" style="color: red;"></i>
+                    Room Categories
+                </div>
+                <div class="cell" data-title="Age">
+                    3
+                </div>
+                <div class="cell" data-title="Occupation">
+                    10
+                </div>
+                <div class="cell" data-title="Location">
+                    20
+                </div>
+                <div class="cell" data-title="Enterprise">
+                    Unlimited
+                </div>
+            </div>
+            <div class="roww">
+                <div class="cell" data-title="Name">
+                    <i class="fa-solid fa-circle-plus" style="color: red;"></i>
+                    Debtor Control
+                </div>
+                <div class="cell" data-title="Age">
+                    <i class="fa-solid fa-check" style="color: green;"></i>
+                </div>
+                <div class="cell" data-title="Occupation">
+                    <i class="fa-solid fa-check" style="color: green;"></i>
+                </div>
+                <div class="cell" data-title="Location">
+                    <i class="fa-solid fa-check" style="color: green;"></i>
+                </div>
+                <div class="cell" data-title="Enterprise">
+                    <i class="fa-solid fa-check" style="color: green;"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End First Table  -->
+
+
+    <!-- Start Second Table -->
+    <div class="wrapper">
+        <div class="table">
+            <div class="roww header">
+                <div class="cell">
+                    Booking Engine
+                </div>
+                <div class="cell">
+                    Entry
+                </div>
+                <div class="cell">
+                    Starter
+                </div>
+                <div class="cell">
+                    Premium
+                </div>
+                <div class="cell">
+                    Enterprise
+                </div>
+            </div>
+            <div class="roww">
+                <div class="cell" data-title="Name">
+                    <i class="fa-solid fa-circle-plus" style="color: red;"></i>
+                    Customisable
+                </div>
+                <div class="cell" data-title="Age">
+                    <i class="fa-solid fa-check" style="color: green;"></i>
+                </div>
+                <div class="cell" data-title="Occupation">
+                    <i class="fa-solid fa-check" style="color: green;"></i>
+                </div>
+                <div class="cell" data-title="Location">
+                    <i class="fa-solid fa-check" style="color: green;"></i>
+                </div>
+                <div class="cell" data-title="Enterprise">
+                    <i class="fa-solid fa-check" style="color: green;"></i>
+                </div>
+            </div>
+            <div class="roww">
+                <div class="cell" data-title="Name">
+                    <i class="fa-solid fa-circle-plus" style="color: red;"></i>
+                    Booking Engine Upselling
+                </div>
+                <div class="cell" data-title="Age">
+                    <i class="fa-solid fa-check" style="color: green;"></i>
+                </div>
+                <div class="cell" data-title="Occupation">
+                    <i class="fa-solid fa-check" style="color: green;"></i>
+                </div>
+                <div class="cell" data-title="Location">
+                    <i class="fa-solid fa-check" style="color: green;"></i>
+                </div>
+                <div class="cell" data-title="Enterprise">
+                    <i class="fa-solid fa-check" style="color: green;"></i>
+                </div>
+            </div>
+            <div class="roww">
+                <div class="cell" data-title="Name">
+                    <i class="fa-solid fa-circle-plus" style="color: red;"></i>
+                    Commision-Free
+                </div>
+                <div class="cell" data-title="Age">
+                    <i class="fa-solid fa-check" style="color: green;"></i>
+                </div>
+                <div class="cell" data-title="Occupation">
+                    <i class="fa-solid fa-check" style="color: green;"></i>
+                </div>
+                <div class="cell" data-title="Location">
+                    <i class="fa-solid fa-check" style="color: green;"></i>
+                </div>
+                <div class="cell" data-title="Enterprise">
+                    <i class="fa-solid fa-check" style="color: green;"></i>
+                </div>
+            </div>
+            <div class="roww">
+                <div class="cell" data-title="Name">
+                    <i class="fa-solid fa-circle-plus" style="color: red;"></i>
+                    Promotion Codes
+                </div>
+                <div class="cell" data-title="Age">
+                    <i class="fa-solid fa-check" style="color: green;"></i>
+                </div>
+                <div class="cell" data-title="Occupation">
+                    <i class="fa-solid fa-check" style="color: green;"></i>
+                </div>
+                <div class="cell" data-title="Location">
+                    <i class="fa-solid fa-check" style="color: green;"></i>
+                </div>
+                <div class="cell" data-title="Enterprise">
+                    <i class="fa-solid fa-check" style="color: green;"></i>
+                </div>
+            </div>
+            <div class="roww">
+                <div class="cell" data-title="Name">
+                    <i class="fa-solid fa-circle-plus" style="color: red;"></i>
+                    Raccoon Price Checker
+                </div>
+                <div class="cell" data-title="Age">
+                    -
+                </div>
+                <div class="cell" data-title="Occupation">
+                    -
+                </div>
+                <div class="cell" data-title="Location">
+                    <i class="fa-solid fa-check" style="color: green;"></i>
+                </div>
+                <div class="cell" data-title="Enterprise">
+                    <i class="fa-solid fa-check" style="color: green;"></i>
+                </div>
+            </div>
+            <div class="roww">
+                <div class="cell" data-title="Name">
+                    <i class="fa-solid fa-circle-plus" style="color: red;"></i>
+                    GA4 Tracking
+                </div>
+                <div class="cell" data-title="Age">
+                    -
+                </div>
+                <div class="cell" data-title="Occupation">
+                    <i class="fa-solid fa-check" style="color: green;"></i>
+                </div>
+                <div class="cell" data-title="Location">
+                    <i class="fa-solid fa-check" style="color: green;"></i>
+                </div>
+                <div class="cell" data-title="Enterprise">
+                    <i class="fa-solid fa-check" style="color: green;"></i>
+                </div>
+            </div>
+            <div class="roww">
+                <div class="cell" data-title="Name">
+                    <i class="fa-solid fa-circle-plus" style="color: red;"></i>
+                    GA4 Ecommerce Event Tracking
+                </div>
+                <div class="cell" data-title="Age">
+                    -
+                </div>
+                <div class="cell" data-title="Occupation">
+                    -
+                </div>
+                <div class="cell" data-title="Location">
+                    <i class="fa-solid fa-check" style="color: green;"></i>
+                </div>
+                <div class="cell" data-title="Enterprise">
+                    <i class="fa-solid fa-check" style="color: green;"></i>
+                </div>
+            </div>
+            <div class="roww">
+                <div class="cell" data-title="Name">
+                    <i class="fa-solid fa-circle-plus" style="color: red;"></i>
+                    Facebook Pixel Tracking
+                </div>
+                <div class="cell" data-title="Age">
+                    -
+                </div>
+                <div class="cell" data-title="Occupation">
+                    <i class="fa-solid fa-check" style="color: green;"></i>
+                </div>
+                <div class="cell" data-title="Location">
+                    <i class="fa-solid fa-check" style="color: green;"></i>
+                </div>
+                <div class="cell" data-title="Enterprise">
+                    <i class="fa-solid fa-check" style="color: green;"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Second Table  -->
+
+
+    <!-- Start Second Table -->
+    <div class="wrapper">
+        <div class="table">
+            <div class="roww header">
+                <div class="cell">
+                    Channel Manager
+                </div>
+                <div class="cell">
+                    Entry
+                </div>
+                <div class="cell">
+                    Starter
+                </div>
+                <div class="cell">
+                    Premium
+                </div>
+                <div class="cell">
+                    Enterprise
+                </div>
+            </div>
+            <div class="roww">
+                <div class="cell" data-title="Name">
+                    <i class="fa-solid fa-circle-plus" style="color: red;"></i>
+                    Booking Channels
+                </div>
+                <div class="cell" data-title="Age">
+                    3
+                </div>
+                <div class="cell" data-title="Occupation">
+                    5
+                </div>
+                <div class="cell" data-title="Location">
+                    Unlimited
+                </div>
+                <div class="cell" data-title="Enterprise">
+                    Unlimited
+                </div>
+            </div>
+            <div class="roww">
+                <div class="cell" data-title="Name">
+                    <i class="fa-solid fa-circle-plus" style="color: red;"></i>
+                    Real-Time Synchronization
+                </div>
+                <div class="cell" data-title="Age">
+                    <i class="fa-solid fa-check" style="color: green;"></i>
+                </div>
+                <div class="cell" data-title="Occupation">
+                    <i class="fa-solid fa-check" style="color: green;"></i>
+                </div>
+                <div class="cell" data-title="Location">
+                    <i class="fa-solid fa-check" style="color: green;"></i>
+                </div>
+                <div class="cell" data-title="Enterprise">
+                    <i class="fa-solid fa-check" style="color: green;"></i>
+                </div>
+            </div>
+            <div class="roww">
+                <div class="cell" data-title="Name">
+                    <i class="fa-solid fa-circle-plus" style="color: red;"></i>
+                    Distribute Multiple Channel Rates
+                </div>
+                <div class="cell" data-title="Age">
+                    <i class="fa-solid fa-check" style="color: green;"></i>
+                </div>
+                <div class="cell" data-title="Occupation">
+                    <i class="fa-solid fa-check" style="color: green;"></i>
+                </div>
+                <div class="cell" data-title="Location">
+                    <i class="fa-solid fa-check" style="color: green;"></i>
+                </div>
+                <div class="cell" data-title="Enterprise">
+                    <i class="fa-solid fa-check" style="color: green;"></i>
+                </div>
+            </div>
+            <div class="roww">
+                <div class="cell" data-title="Name">
+                    <i class="fa-solid fa-circle-plus" style="color: red;"></i>
+                    Google Hotel Premium Ads Partner
+                </div>
+                <div class="cell" data-title="Age">
+                    <i class="fa-solid fa-check" style="color: green;"></i>
+                </div>
+                <div class="cell" data-title="Occupation">
+                    <i class="fa-solid fa-check" style="color: green;"></i>
+                </div>
+                <div class="cell" data-title="Location">
+                    <i class="fa-solid fa-check" style="color: green;"></i>
+                </div>
+                <div class="cell" data-title="Enterprise">
+                    <i class="fa-solid fa-check" style="color: green;"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Third Table  -->
+    <div class="container-fluid">
+        <div class="row">
+          <div class="col-12 take">
+            <h3 style="font-size: 35px;">Today’s positive online reviews are tomorrow's profit!</h3>
+          </div>
+        </div>
+    </div>
+    <div class="container mt-3">
+        <div class="row" style="padding-top: 30px;">
+            <div class="col-lg-6 m-auto">
+                <img decoding="async" src="https://via.placeholder.com/500x200/e1b77e/FFF?text=Video" alt="" style="display: block; margin: auto; border-radius: 16px;">
+                <p class="text-center mt-2">Video title goes here and it is changed</p>
+            </div>
+            <div class="col-lg-6 m-auto">
+                <img decoding="async" src="https://via.placeholder.com/500x200/e1b77e/FFF?text=Video" alt="" style="display: block; margin: auto; border-radius: 16px;">
+                <p class="text-center mt-2">Video title goes here and it is changed</p>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+       
+        <div class="col-lg-12 m-auto">
+            
+                <button class="d-block btn my-special-btn"
+                    style="width: 220px;height: 70px;line-height: 60px;font-size: 30px;margin:100px auto;border-radius: 10px;box-shadow: 5px 5px 5px #CCC;">
+                    <a class="best-fits" href="contact.html" style="text-decoration: none; color: var(--dark) ;">Contact us</a>
+                </button>
+            
+        </div>
+        
+    </div>
+    <!-- Start Find Us -->
+    <!-- <div class="container text-center pb-5" style="padding-top: 150px;">
+        <div class="row">
+            <h3 style="font-size: 50px;color: var(--dark);" class="mb-4">Find us here</h3>
+            <iframe width="1141" height="531" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+                id="gmap_canvas"
+                src="https://maps.google.com/maps?width=1141&amp;height=531&amp;hl=en&amp;q=%20Ilford+()&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a
+                href='https://google-map-generator.com/'></a>
+        </div>
+    </div> -->
+    <!-- End Find Us -->
+
+    
+<!-- Start Footer -->
+<div class="footer">
+    <div class="container  pb-3">
+        <div class="row">
+            <div class="col-md-8 col-sm-12">
+                <div class="d-flex gap-5 mt-5 footer-top">
+                    <div style="font-size: 20px;">
+                        <p><a href="index.html" style="color: var(--light);text-decoration: none;">Home</a></p>
+                        <p><a href="franchise.html" style="color: var(--light);text-decoration: none;">Franchise</a>
+                        </p>
+                        <p><a href="about.html" style="color: var(--light);text-decoration: none;">About</a></p>
+                        <br>
+                        <br>
+                        <p><a href="blog.html" style="color: var(--light);text-decoration: none;">News/Blog</a>
+                        </p>
+                        <p><a href="reviews.html" style="color: var(--light);text-decoration: none;">Reviews</a></p>
+                    </div>
+                    <div style="font-size: 20px;margin-top: 90px;">
+                        <p><a href="order-1.html" style="color: var(--light);text-decoration: none;">Order</a></p>
+                        <p><a href="referral.html" style="color: var(--light);text-decoration: none;">Refferal
+                                program</a></p>
+                        <p><a href="franchise.html" style="color: var(--light);text-decoration: none;">Become a
+                                franchise</a></p>
+                        <p><a href="contact.html" style="color: var(--light);text-decoration: none;">Become a
+                                client</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-12 position-relative text-center footer-bottom" style="margin-top: 100px;">
+                <h3>Contact</h3>
+                <p>+385911985132</p>
+                <p>Boškovićeva ul. 7,</p>
+                <p>Zagreb , Croatia</p>
+                <div class="d-flex gap-5 footer-bottom justify-content-center mt-4">
+                    <i class="fa-brands fa-instagram fa-2x"  style="cursor: pointer;"></i>
+                    <i class="fa-brands fa-facebook fa-2x"  style="cursor: pointer;"></i>
+                    <i class="fa-brands fa-youtube fa-2x"  style="cursor: pointer;"></i>
+                </div>
+            </div>
+            <div class="col-12 text-center mt-5">
+                <p style="color: var(--light);">© copyright 2023 FastReview © | All Rights Reserved | <a
+                        href="privacy.html" style="color: var(--light);">Privacy
+                        Policy</a> | <a href="#" style="color: var(--light);">Terms & Conditions</a></ps>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Footer -->
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

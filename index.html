@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- <link rel="icon" href="imgs/logo.png" type="image/logo-icon" /> -->
+  <link rel="icon" href="imgs/raito-logo.jpg" type="image/logo-icon" />
+  <title>FastReview | Home</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Basic&display=swap" rel="stylesheet">
+  <!-- Google Fonts -->
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="css/all.min.css" />
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/normalize.css" />
+  <link rel="stylesheet" href="css/main.css" />
+  <!-- Font Awesome -->
+</head>
+
+<body>
+
+  <style>
+    /* Slider */
+    @keyframes logoSlider {
+      from {
+        transform: translate(-30%);
+      }
+
+      to {
+        transform: translate(100%);
+      }
+    }
+
+    .logo-slider {
+      display: inline-block;
+      animation: logoSlider 25s infinite linear;
+    }
+
+    .logo-slider img {
+      margin: 0 40px;
+    }
+
+    .slider {
+      white-space: nowrap;
+      overflow: hidden;
+      padding: 40px 0;
+      position: relative;
+    }
+
+    .slider::before,
+    .slider::after {
+      position: absolute;
+      top: 0;
+      width: 150px;
+      height: 100%;
+      content: "";
+      z-index: 2;
+    }
+
+    /* Slider */
+
+    /* Opposite Slider */
+   @keyframes secLogoSlider {
+      from {
+        transform: translate(30%);
+      }
+
+      to {
+        transform: translate(-100%);
+      }
+     
+      }
+
+    .sec-logo-slider {
+      display: inline-block;
+      animation: secLogoSlider 25s infinite linear;
+    }
+
+    .sec-logo-slider img {
+      margin: 0 40px;
+    }
+
+    .sec-slider {
+      white-space: nowrap;
+      overflow: hidden;
+      padding: 40px 0;
+      position: relative;
+    }
+
+    .sec-slider::before,
+    .sec-slider::after {
+      position: absolute;
+      top: 0;
+      width: 150px;
+      height: 100%;
+      content: "";
+      z-index: 2;
+    }
+
+    /* Opposite Slider */
+  </style>
+
+  <!-- Start NavBar -->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top navbar-light bg-light">
+    <div class="container">
+      <img src="./imgs/fast-review-logo-1.png" style="width: 200px;" alt="">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon" style="border: 1px solid #000;"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-5">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="order-2.html">Order</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="franchise.html">Franchise</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- End NavBar -->
+
+  <!-- Start Fast -->
+  <div class="fast home-fast">
+    <div class="container text-center mb-5 pt-5" style="margin-top: 170px;">
+      <div class="row">
+        <div class="col-12">
+          <h3 style="font-size: 56px;">Transforming Interactions into Trust</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Fast -->
+
+
+  <!-- Start Video -->
+  <div class="video home-video">
+    <div class="container-fluid mt-5 pt-5">
+      <div class="row">
+        <div class="col-12">
+          <video width="100%" height="100%" autoplay muted controls>
+            <source src="./imgs/video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <!-- End Video -->
+
+  <!-- Start Cards -->
+  <div class="cards">
+    <div class="container mt-5 pt-5 pb-5">
+      <div class="row d-flex justify-content-center align-content-center align-items-center">
+        <div class="col-md-2 col-sm-12">
+          <div class="card" style=" width: 190px;margin: 0 60px 0 0;">
+            <div class="card-body" style="padding: 40px 0 40px 0;">
+              <!-- <img src="./imgs/icon1.svg" alt=""><br> -->
+              <div class="number">
+                <div class="value-wrap">
+                  <div class="d-flex justify-content-center">
+                    <span class="value" akhi="">90</span> <span>%</span>
+                  </div>
+                </div>
+              </div>
+              <P style="font-size: 14px">of consumers say their<br>
+                purchases are influenced<br>
+                by online reviews</P>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2 col-sm-12">
+          <div class="card" style=" width: 190px;margin: 0 30px 0 30px;">
+            <div class="card-body" style="padding: 40px 0 40px 0;">
+              <!-- <img src="./imgs/icon2.svg" alt=""><br> -->
+              <div class="number">
+                <div class="value-wrap">
+                  <div class="d-flex justify-content-center">
+                    <span class="value" akhi="">54</span> <span>%</span>
+                  </div>
+                </div>
+              </div>
+              <P style="font-size: 14px">of consumers will visit a <br>
+                website after reading
+                <br>
+                positive reviews
+              </P>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2 col-sm-12 ">
+          <div class="card" style=" width: 190px;margin: 0 0 0 60px;">
+            <div class="card-body" style="padding: 40px 0 40px 0;">
+              <!-- <img src="./imgs/icon3.svg" alt=""><br> -->
+              <div class="number">
+                <div class="value-wrap">
+                  <div class="d-flex justify-content-center">
+                    <span class="value" akhi="">73</span> <span>%</span>
+                  </div>
+                </div>
+              </div>
+              <P style="font-size: 14px">of consumers trust a local<br>
+                company more if it has <br>
+                positive reviews
+              </P>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row d-flex justify-content-center align-content-center align-items-center">
+        <div class="col-md-2 col-sm-12 mt-4">
+          <div class="card" style=" width: 190px;margin: 0 60px 0 0;">
+            <div class="card-body" style="padding: 50px 0 40px 0;">
+              <!-- <img src="./imgs/icon4.svg" alt=""><br> -->
+              <div class="number">
+                <div class="value-wrap">
+                  <div class="d-flex justify-content-center">
+                    <span class="value" akhi="">84</span> <span>%</span>
+                  </div>
+                </div>
+              </div>
+              <P style="font-size: 14px;text-align: center;">of consumers trust online <br>
+                reviews as much as <br>
+                personal recommendations
+              </P>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2 col-sm-12 mt-4">
+          <div class="card" style=" width: 190px;margin: 0 30px 0 30px;">
+            <div class="card-body" style="padding: 40px 0 40px 0;">
+              <!-- <img src="./imgs/icon5.svg" style="width: 66px;" alt=""> -->
+              <p style="font-size: 14px;font-weight: 500;margin-bottom: -10px;"> Consumer reviews are
+                trusted</p>
+              <div class="number">
+                <div class="value-wrap">
+                  <div class="d-flex justify-content-center">
+                    <span class="value" akhi="">12</span> <span>%</span>
+                  </div>
+                </div>
+              </div>
+              <P style="font-size: 14px">more than the <br>
+                manufacturer's<br> descriptions
+              </P>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2 col-sm-12 mt-4">
+          <div class="card" style=" width: 190px;margin: 0 0 0 60px;">
+            <div class="card-body" style="padding: 40px 0 40px 0;">
+              <!-- <img src="./imgs/icon6.svg" alt=""><br> -->
+              <P style="margin-top: 10px;font-size: 14px;">Online product reviews<br>
+                can increase sales by <br> more
+                than
+              </P>
+              <div class="number">
+                <div class="value-wrap">
+                  <div class="d-flex justify-content-center">
+                    <span class="value" akhi="">270</span> <span>%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Cards -->
+
+  <!-- Start Take -->
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12 take">
+        <h3 style="font-size: 35px;">Get a massive influx of positive online reviews and watch your
+          business grow</h3>
+      </div>
+    </div>
+  </div>
+  <!-- End Take -->
+
+
+  <!-- Start platform -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-sm-12 platform ms-auto">
+        <h3>How does FastReview</h3>
+        <h3>platform work?</h3>
+        <p>Skyrocket Your Business in Seconds</p>
+      </div>
+    </div>
+  </div>
+  <!-- End platform -->
+
+  <!-- Start With -->
+  <div class="container-fluid p-5 with">
+    <div class="row">
+      <div class="col-6 with-img">
+        <img src="./imgs/Untitled design 1.png" alt="" style="width: 100%;">
+      </div>
+      <div class="col-md-6 col-sm-12 with-content">
+        <h5>With FastReview, giving your clients the power to boost
+          your business is as simple as tapping their phone on a
+          FastReview card. </h5>
+        <h5>They are able to easily leave reviews on important
+          platforms and connect with you on social media right
+          away in under 20 seconds. </h5>
+        <h5>Whether you operate a global enterprise or a local business, online reviews have a significant
+          impact on your brand's reputation. Experience the impact today.</h5>
+      </div>
+
+    </div>
+  </div>
+  <!-- End With -->
+
+  <!-- Start Cards -->
+  <div class="cards">
+    <div class="container mt-5 pt-5 pb-5 mb-5">
+      <div class="row d-flex justify-content-center align-content-center align-items-center">
+        <div class="col-md-4 col-sm-12">
+          <div class="card">
+            <div class="card-body">
+              <img src="./imgs/icon7.svg" alt=""><br><br>
+              <h4>What is Fast Review and</h4>
+              <h4>How Does it Work?</h4>
+              <P style="font-size: 14px;">
+                Fast Review is a solution for upgrading your online reputation.
+                <br>
+                By simply tapping the phone on the FastReview card, your customers are directed to post
+                their reviews on it
+                different platforms, to follow you on social media, or to check out your latest offer - the
+                possibilities are limitless
+              </P>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-12">
+          <div class="card">
+            <div class="card-body">
+              <img src="./imgs/icon8.svg" alt=""><br><br>
+              <h4>What are the advantages</h4>
+              <h4>of Fast Review?</h4>
+              <P style="font-size: 14px;">
+                Our system empowers your customers to quickly share reviews, turning your success into
+                positive online word-of-mouth.
+                <br>
+                We help you enhance your profits while maintaining a credible and positive reputation on the
+                internet.
+
+              </P>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-12">
+          <div class="card">
+            <div class="card-body">
+              <img src="./imgs/icon9.svg" alt="" style="width: 60px;"><br><br>
+              <h4>Is there more to gain with </h4>
+              <h4>the FastReview solution?</h4>
+              <P style="font-size: 14px;">
+                In addition to your custom cards, you'll receive a user-friendly web app that empowers you to
+                effortlessly manage all your customer reviews. With Fast Review's intuitive software, you can
+                seamlessly keep tabs on your team's performance and monitor daily progress.
+              
+              </P>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Cards -->
+
+  <!-- Start Image -->
+  <img src="./imgs/FastReview Pitch Photo Theme 1.png" alt="" style="width: 100%;">
+  <!-- End Image -->
+
+
+  <!-- Start Cards -->
+  <div class="cards">
+    <div class="container mt-5 pt-5 pb-5 mb-5">
+      <div class="row d-flex justify-content-center align-content-center align-items-center">
+        <h2 class="text-center mb-5 mt-5" style="font-size: 45px;">Why Clients Love Fast Review:</h2>
+        <div class="col-md-4 col-sm-12">
+          <div class="card">
+            <div class="card-body" style="text-align: left;">
+              <img src="./imgs/Liburnia Hotels & Villas logo.png" alt="">
+              <h5 style="color: var(--dark);" class="mt-3 mb-4">Marina Zic, Corporate Quality <br> Control Manager</h5>
+              <h5 style="text-align: center;color: var(--dark);font-weight: 500;" class="mb-3">"Significant positive changes!"</h5>
+              <P style="font-size: 14px;text-align: center;">
+                The cards have a sophisticated look and are branded
+                according to our wishes. The application itself is
+                easy to use, changes made to the application are
+                updated in an instant. After a very short period of
+                using this solution, we noticed significant positive
+                changes. From our side, only recommendations for
+                the Fast Review application.
+
+              </P>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-12">
+          <div class="card">
+            <div class="card-body" style="text-align: left;">
+              <img src="./imgs/HGI-Logo-Color_HR.png" alt="">
+              <h5 style="color: var(--dark);" class="mt-2 mb-2">Ninoslav Vidovic, Cluster Commercial <br>Director</h5>
+              <h5 style="text-align: center;color: var(--dark);font-weight: 500;" class="mb-3">"Revolutionary product!"
+              </h5>
+              <P style="font-size: 14px;text-align: center;">
+                Fast Review is a tool that came to market in the
+                right time, outbidding the financial cost with the
+                business value. It is uniquely cutting distance from the service provider (hotel, restaurant, bar, etc.)
+                and customer by capturing customers’ feedback at the point of experience while it is still going on,
+                and not being transferred into memory part of the
+                <br>
+                brain
+              </P>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-12">
+          <div class="card">
+            <div class="card-body" style="text-align: left;">
+              <img src="./imgs/opereta.png" alt="" style="background-color: var(--dark);">
+              <h5 style="color: var(--dark);" class="mt-4 mb-5">Borislav Vujovic, Director</h5>
+              <h5 style="text-align: center;color: var(--dark);font-weight: 500;" class="mb-5">"Our rating on Google has increased!"
+              </h5>
+              <P style="font-size: 14px;text-align: center;margin-top: 30px;"> 
+                We've been using Fast Review for a year now, and
+                it's proven to be a great feedback tool for our
+                clients' satisfaction with our service. Our rating on
+                Google has increased because it is easier to rate
+                our service. In any case, I recommend it to
+                everyone who wants to improve their business.
+
+              </P>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Cards -->
+
+  <!-- Start Image Slider -->
+  <section class="slider" style="background-color: #e1b87e50;">
+    <div class="logo-slider d-flex justify-content-center">
+      <div style="width: 400px;">
+        <img src="./imgs/2.png" alt="" style="width: 150px;height: 100px;margin-right:20px;">
+      </div>
+      <div style="width: 400px;">
+        <img src="./imgs/Address Boulevard.png" alt="" style="width: 150px;height: 100px;margin-right:20px;">
+      </div>
+      <div style="width: 400px;">
+        <img src="./imgs/Artwork Voco Dubai-1.png" alt="" style="width: 150px;height: 100px;margin-right:20px;">
+      </div>
+      <div style="width: 400px;">
+        <img src="./imgs/Intercontinental Marina.png" alt="" style="width: 150px;height: 100px;margin-right:20px;">
+      </div>
+      <div style="width: 400px;">
+        <img src="./imgs/Layer_3.png" alt="" style="width: 150px;height: 100px;margin-right:20px;">
+      </div>
+    </div>
+  </section>
+<!-- Start Image -->
+<section class="sec-slider" style="background-color: #e1b87e50;padding:20px;">
+  <div class="sec-logo-slider d-flex justify-content-center">
+    <div style="width: 400px;">
+      <img src="./imgs/lutak.png" alt="" style="width: 150px;height: 150px;margin-right:20px;">
+    </div>
+    <div style="width: 400px;">
+      <img src="./imgs/lotus.png" alt="" style="width: 150px;height: 150px;margin-right:20px;">
+    </div>
+    <div style="width: 400px;">
+      <img src="./imgs/crowne_plaza.png" alt="" style="width: 150px;height: 150px;margin-right:20px;">
+    </div>
+    <div style="width: 400px;">
+      <img src="./imgs/carwiz.png" alt="" style="width: 150px;height: 150px;margin-right:20px;">
+    </div>
+  </div>
+</section>
+
+  <!-- End Image Slider -->
+
+  <!-- Start platform -->
+  <div class="container mb-5">
+    <div class="row">
+      <div class="col-md-6 col-sm-12 platform mt-5 mb-5">
+        <h3>Choose your card</h3>
+        <h5 class="fs-4">Customize your Review cards by adding your logo. </h5>
+        <h5 class="fs-4">Choose the material type that best fits your Brand.</h5>
+      </div>
+      <!-- <div class="col-md-6 col-sm-12 mt-5 home-img">
+        <img src="./imgs/your logo cards-06 1.png" alt="">
+      </div> -->
+    </div>
+  </div>
+  <!-- End platform -->
+
+  <!-- Start With -->
+  <div class="container-fluid p-5 with" style="background-color: #E1B77E;margin-top: 50px;">
+    <div class="row">
+      <div class="col-md-6 col-sm-12 with-img text-center">
+        <img src="./imgs/your logo cards-06 1.png" alt="" style="width: 70%;border-radius: 20%;">
+      </div>
+      <div class="col-md-5 col-sm-12 with-content position-relative">
+        <div class="position-absolute d-flex justify-content-center" style="top: -100px;">
+          <button class="btn my-special-btn" 
+            style="width: 100%;font-size: 40px;font-weight: bold;box-shadow: 5px 5px 10px #555;width: 250px;height: 100px;margin: 20px 0 0 135px;border-radius: 20px;">
+            <a class="best-fits" href="contact.html" style="text-decoration: none; color: var(--dark) ;">Contact us</a> 
+          </button>
+        </div>
+        <h3 class="text-center" style="color: var(--light);font-size: 36px;">Choose the material type that</h3>
+        <h3 class="text-center" style="color: var(--light);font-size: 36px;">best fits your Brand.</h3>
+      </div>
+    </div>
+  </div>
+  <!-- End With -->
+
+  <!-- Start Image -->
+  <!-- <div class="container-fluid mb-5">
+    <div class="row">
+      <img src="./imgs/image-5.png" alt="">
+    </div>
+  </div> -->
+  <!-- End Image -->
+
+  <!-- Start Image -->
+  <div class="container-fluid mt-5">
+    <div class="row">
+      <h3 class="text-center mt-5" style="font-size: 50px;">Honors & Awards</h3>
+      <img src="./imgs/image-10.jpg" alt="" style="mix-blend-mode: multiply;">
+    </div>
+  </div>
+  <!-- End Image -->
+
+<!-- Start Footer -->
+<div class="footer">
+  <div class="container  pb-3">
+    <div class="row">
+      <div class="col-md-8 col-sm-12">
+        <div class="d-flex gap-5 mt-5 footer-top">
+          <div style="font-size: 20px;">
+            <p><a href="index.html" style="color: var(--light);text-decoration: none;">Home</a></p>
+            <p><a href="franchise.html" style="color: var(--light);text-decoration: none;">Franchise</a>
+            </p>
+            <p><a href="about.html" style="color: var(--light);text-decoration: none;">About</a></p>
+            <br>
+            <br>
+            <p><a href="blog.html" style="color: var(--light);text-decoration: none;">News/Blog</a>
+            </p>
+            <p><a href="reviews.html" style="color: var(--light);text-decoration: none;">Reviews</a></p>
+          </div>
+          <div style="font-size: 20px;margin-top: 90px;">
+            <p><a href="order-1.html" style="color: var(--light);text-decoration: none;">Order</a></p>
+            <p><a href="referral.html" style="color: var(--light);text-decoration: none;">Refferal
+                program</a></p>
+            <p><a href="franchise.html" style="color: var(--light);text-decoration: none;">Become a
+                franchise</a></p>
+            <p><a href="contact.html" style="color: var(--light);text-decoration: none;">Become a
+                client</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-12 position-relative text-center footer-bottom" style="margin-top: 100px;">
+        <h3>Contact</h3>
+        <p>+385911985132</p>
+        <p>Boškovićeva ul. 7,</p>
+        <p>Zagreb , Croatia</p>
+        <div class="d-flex gap-5 footer-bottom justify-content-center mt-4">
+          <i class="fa-brands fa-instagram fa-2x"  style="cursor: pointer;"></i>
+          <i class="fa-brands fa-facebook fa-2x"  style="cursor: pointer;"></i>
+          <i class="fa-brands fa-youtube fa-2x"  style="cursor: pointer;"></i>
+        </div>
+      </div>
+      <div class="col-12 text-center mt-5">
+        <p style="color: var(--light);">© copyright 2023 FastReview © | All Rights Reserved | <a href="privacy.html"
+            style="color: var(--light);">Privacy
+            Policy</a> | <a href="#" style="color: var(--light);">Terms & Conditions</a></ps>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Footer -->
+
+
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/index.js"></script>
+</body>
+
+</html>
